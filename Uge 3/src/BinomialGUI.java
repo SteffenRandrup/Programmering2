@@ -6,20 +6,25 @@ import javax.swing.*;
 
 public class BinomialGUI {
 
-	private static JFrame frame;
-	private static JTextField svar;
-	private static JTextField nField;
-	private static JTextField kField;
-	private static Binomial bin;
+	private JFrame frame;
+	private JTextField svar;
+	private JTextField nField;
+	private JTextField kField;
+	private JButton udregn;
+	private Binomial bin;
+	private JPanel top;
+	private JPanel bund;
+	private JLabel nLabel;
+	private JLabel kLabel;
 	
-	public static void main(String[] args){
+	public BinomialGUI(Binomial bino){
 		
-		JButton udregn = new JButton("Regn ud");
+		bin = bino;
+		udregn = new JButton("Regn ud");
 		svar = new JTextField(7);
 		svar.setEditable(false);
 		nField = new JTextField(5);
 		kField = new JTextField(5);		
-		bin = new Binomial1();
 		
 		udregn.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
@@ -31,15 +36,15 @@ public class BinomialGUI {
 			}
 		});
 		
-		JPanel top = new JPanel();
-		JLabel nLabel = new JLabel("n: ");
+		top = new JPanel();
+		nLabel = new JLabel("n: ");
 		top.add(nLabel);
 		top.add(nField);
-		JLabel kLabel = new JLabel("k: ");
+		kLabel = new JLabel("k: ");
 		top.add(kLabel);
 		top.add(kField);
 		
-		JPanel bund = new JPanel();
+		bund = new JPanel();
 		bund.add(udregn);
 		bund.add(svar);
 		
