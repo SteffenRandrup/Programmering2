@@ -9,27 +9,25 @@ public class MultisetTest {
 	a.add("Foo");
 	a.add("Bar");
 	a.add("Foo");
-	//System.out.println("a:" + a); // test toString
+	System.out.println("a:" + a); // test toString
 
 	b.add("Bar");
 	b.add("Foo");
 	b.add("Bar");
 	b.add("Foo");
-	//System.out.println("b:" + b);
+	System.out.println("b:" + b);
 
 	assert !a.equals(b) : "Failed test 1!"; // test equals
 	assert b.remove("Bar") : "Failed test 2!"; // test remove
 	
 	assert a.equals(b) : "Failed test 3!";
 	
-	System.out.println(b);
 	for(String s : a) { // test iterator
 	    assert b.remove(s) : "Failed test 4!";
-	    System.out.println(b);
 	}
 	
 	assert b.size() == 0 : "Failed test 5!";
-	
+
 	Set<String> baseSet = new HashSet<String>(a);
 	assert baseSet.size()==2 : "Failed test 6!"; 
 

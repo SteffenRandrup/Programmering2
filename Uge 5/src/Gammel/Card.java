@@ -28,33 +28,23 @@ public class Card implements Comparable<Card>{
 	
 	@Override
 	public boolean equals(Object other){
-		
-		if(this == other) return true;
-		if(other == null) return false;
-		if(getClass() != other.getClass()) return false;
-		
-//		if(this.getClass() == other.getClass() && this.compareTo((Card) other)==0){
-//			return true;
-//		}
-//		return false;
-		
-		if(compareTo((Card) other) == 0) return true;
-		
+		//Bruger Object i stedet for Card, fordi der står i opgaven, at metoden skal override equlas, or den er formuleret med object
+		//checker for lighed mellem Class for at undgå runtime error, når jeg nu laver Cast af object til Card
+		if(this.getClass() == other.getClass() && this.compareTo((Card) other)==0){
+			return true;
+		}
 		return false;
-		
 	}
 	
 	@Override
 	public int hashCode(){
 		
-//		String s = toString();
-//		int hash = 0;
-//		for (int i = 0; i<s.length(); i++){
-//			hash = 13*rank.hashCode() + 11*suit.hashCode();
-//		}
-//		return hash;
-		
-		return 11 * rank.hashCode() + 13 * suit.hashCode();
+		String s = toString();
+		int hash = 0;
+		for (int i = 0; i<s.length(); i++){
+			hash = 13*rank.hashCode() + 11*suit.hashCode();
+		}
+		return hash;
 	}
 	
 	public Suit getSuit(){
