@@ -5,7 +5,7 @@ public class Hand {
 	// TreeSet ser ud til at være et godt valg, fordi det har metoder, der returnerer true og false
 	// på sammen måde som der kræves i opgaven. Og resten bliver ret nemt at løse
 	
-	TreeSet<Card> ts = new TreeSet<Card>();
+	private TreeSet<Card> ts = new TreeSet<Card>();
 	
 	public boolean add(Card c){	
 		return ts.add(c);
@@ -33,8 +33,8 @@ public class Hand {
 		if(this == other) return true;
 		if(other == null) return false;
 		if(getClass() != other.getClass()) return false;
-		if(hashCode() == ((Hand) other).hashCode()) return true;	// hvis deres hashcodes er ens må de også være ens, hvis ellers jeg har lavet hashCode() rigtigt 
-		return false;
+		Hand h = (Hand) other;
+		return h.ts.equals(ts);
 	}
 	
 	public int hashCode(){

@@ -22,11 +22,15 @@ public class MultisetTest {
 	
 	assert a.equals(b) : "Failed test 3!";
 	
-	System.out.println(b);
+	System.out.println("a = "+ a);
 	for(String s : a) { // test iterator
-	    assert b.remove(s) : "Failed test 4!";
-	    System.out.println(b);
+		System.out.println("s = "+ s);
+		System.out.println(b );
+		assert b.remove(s) : "Failed test 4!";
+		
 	}
+	
+
 	
 	assert b.size() == 0 : "Failed test 5!";
 	

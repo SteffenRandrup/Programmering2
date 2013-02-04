@@ -1,0 +1,354 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Sub",
+				"SublimeLinter"
+			],
+			[
+				"vis",
+				"visitDirectory(DirectoryNode)	Void"
+			],
+			[
+				"comp",
+				"compareTo(String)	int"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"p",
+				"paragraph"
+			],
+			[
+				"pri",
+				"println"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 102.0,
+		"selected_items":
+		[
+			[
+				"source",
+				"Java: Open Source"
+			],
+			[
+				"impo",
+				"Java: Import Class Under Cursor"
+			],
+			[
+				"import",
+				"Java: Import Class Under Cursor"
+			],
+			[
+				"imp",
+				"Java: Import Class Under Cursor"
+			],
+			[
+				"linte",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"javado",
+				"Java: Open Javadoc"
+			],
+			[
+				"javad",
+				"Java: Open Javadoc"
+			],
+			[
+				"java",
+				"Java: Open Source"
+			],
+			[
+				"error",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"ja",
+				"Java: Open Source"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"proje",
+				"Project: Save As"
+			],
+			[
+				"java d",
+				"Java: Open Javadoc"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"edit",
+				"Project: Edit"
+			],
+			[
+				"dock",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"dockblo",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"instaa",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Gui"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"df",
+				"Snippet: dfrac"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Toggle Comment"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"snippet ga",
+				"Snippet: gather"
+			],
+			[
+				"Snippet: dfr",
+				"Snippet: dfrac"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/steffen/Dropbox/Apps/Sublime-text-2/Packages/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"util",
+			"dfrac",
+			"4cm",
+			"2",
+			"tinylist",
+			"list",
+			"nality",
+			"align",
+			"section name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.git":
+	{
+		"height": 90.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"para",
+				"src/ParameterError.java"
+			],
+			[
+				"sear",
+				"SearchVisitor.java"
+			],
+			[
+				"test",
+				"Test1.java"
+			],
+			[
+				"ja",
+				"Test1.java"
+			],
+			[
+				"jav",
+				"SearchVisitor.java"
+			],
+			[
+				"java",
+				"SearchVisitor.java"
+			],
+			[
+				"",
+				"test.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/steffen/Desktop/test/test.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true
+}

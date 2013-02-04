@@ -1,0 +1,421 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Sub",
+				"SublimeLinter"
+			],
+			[
+				"vis",
+				"visitDirectory(DirectoryNode)	Void"
+			],
+			[
+				"comp",
+				"compareTo(String)	int"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"p",
+				"paragraph"
+			],
+			[
+				"pri",
+				"println"
+			]
+		]
+	},
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"java",
+				"Java: Open Javadoc"
+			],
+			[
+				"javad",
+				"Java: Open Javadoc for Class Under Cursor"
+			],
+			[
+				"javado",
+				"Java: Open Javadoc"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"dock",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"blo",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"java d",
+				"Java: Open Javadoc"
+			],
+			[
+				"edit",
+				"Project: Edit"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"dockblo",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"proje",
+				"Project: Edit"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"instaa",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Gui"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"df",
+				"Snippet: dfrac"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Toggle Comment"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"snippet ga",
+				"Snippet: gather"
+			],
+			[
+				"Snippet: dfr",
+				"Snippet: dfrac"
+			]
+		],
+		"width": 588.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/steffen/.config/sublime-text-2/Packages/User/SublimeJava.sublime-settings",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/SizeVisitor.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/ListFileSizeVisitor.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/Afl6-20113842.zip",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/FileNode.java",
+		"/home/steffen/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/SublimeAStyleFormatter/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/User/BracketHighlighter.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/Auto Semi-Colon/Default (Windows).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/Auto Semi-Colon/AutoSemiColon.py",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/Uge 6.sublime-project",
+		"/home/steffen/Desktop/test/src/SearchVisitor.java",
+		"/home/steffen/Desktop/sublimetext-todo",
+		"/home/steffen/Desktop/SublimePluginDependencies",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/SearchVisitor.java",
+		"/home/steffen/Desktop/test.php",
+		"/home/steffen/.config/sublime-text-2/Packages/DocBlockr/Base File.sublime-settings",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/FileSystemNode.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/FileSystemVisitor.java",
+		"/home/steffen/.config/sublime-text-2/Packages/User/SublimeLinter.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/steffen/Dropbox/Apps/Sublime-text-2/Packages/User/SublimeJava.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/SublimeJava/SublimeJava.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/LiveReload/LiveReload.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/SublimeRope/README.markdown",
+		"/home/steffen/.config/sublime-text-2/Packages/WordCount/WordCount.sublime-settings",
+		"/home/steffen/Dropbox/Skole/Fysikkens Videnskabsteori/Uge 49/SteffenRandrup5.tex",
+		"/home/steffen/.config/sublime-text-2/Packages/Emmet/Emmet.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/Alignment/Base File.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/AdvancedNewFile/AdvancedNewFile.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/ADBView/ADBView.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/User/ADBView.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/User/Git.sublime-settings",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/hej",
+		"/home/steffen/Desktop/test/test1.java",
+		"/home/steffen/Desktop/test/test.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/Test1.java",
+		"/home/steffen/.config/sublime-text-2/Packages/SublimeRope/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/SplitScreen-Resizer/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/SideBarEnhancements/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/Djaneiro/Settings/HTML (Django).sublime-settings",
+		"/home/steffen/.config/sublime-text-2/Packages/Djaneiro/Settings/Python (Django).sublime-settings",
+		"/home/steffen/Desktop/style.css",
+		"/home/steffen/Desktop/index.html",
+		"/home/steffen/.config/sublime-text-2/Packages/GoToDoc/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/SublimeLinter/Default (Linux).sublime-keymap",
+		"/home/steffen/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/home/steffen/Desktop/test.tex",
+		"/home/steffen/.config/sublime-text-2/Packages/LaTeXTools/Default (Linux).sublime-keymap",
+		"/home/steffen/Dropbox/Apps/Sublime-text-2/Packages/User/dfrac.sublime-snippet",
+		"/home/steffen/.config/sublime-text-2/Packages/User/Java-custom.sublime-build",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/Test2.java",
+		"/home/steffen/Downloads/videnskabsteori.tex",
+		"/home/steffen/Dropbox/Skole/Skabeloner/preamble.tex",
+		"/home/steffen/Dropbox/Documents/Rikke gave/rikke.tex",
+		"/home/steffen/Desktop/Python testing/files.py",
+		"/home/steffen/Desktop/Python testing/module.py",
+		"/home/steffen/Desktop/Python testing/hello.py",
+		"/home/steffen/Desktop/Python testing/functions.py",
+		"/home/steffen/Desktop/Python testing/iterator.py",
+		"/home/steffen/Desktop/Python testing/mathoperators.py",
+		"/home/steffen/Desktop/Python testing/dictionary.py",
+		"/home/steffen/Desktop/Python testing/touples.py",
+		"/home/steffen/Desktop/Python testing/lists.py",
+		"/home/steffen/Desktop/Python testing/test.py",
+		"/home/steffen/Desktop/Python testing/nytest.py",
+		"/home/steffen/Desktop/test.py",
+		"/home/steffen/Dsektop/test.py",
+		"/home/steffen/Desktop/min.tex",
+		"/home/steffen/Dropbox/Skole/Skabeloner/LateX/beamer/pres.tex",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/WordCountTest.java",
+		"/home/steffen/.workspace/Uge 5/src/MultiSet.java",
+		"/home/steffen/argument.txt",
+		"/home/steffen/Desktop/argument",
+		"/home/steffen/Desktop/afsnit-med-indhold.txt",
+		"/home/steffen/Desktop/bobob",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 5/src/MultisetTest.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 5/src/MultiSet.java",
+		"/home/steffen/.cache/.fr-SOViBP/SearchVisitor.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/src/README.txt",
+		"/home/steffen/.cache/.fr-kM95G8/SearchVisitor.java",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/index.html",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 6/test.txt",
+		"/home/steffen/.cache/.fr-R0gtZJ/Hand.java",
+		"/home/steffen/.config/sublime-text-2/Packages/User/Java.sublime-settings",
+		"/home/steffen/Dropbox/Sublime-text-2-essentials",
+		"/home/steffen/Dropbox/Skole/Programmering 2/Uge 4/src/CatFiles.java",
+		"/home/steffen/Dropbox/Skole/Vektoranalyse/Uge 6/Aflevering 6.tex",
+		"/home/steffen/.config/sublime-text-2/Packages/User/document.sublime-snippet",
+		"/home/steffen/Dropbox/Skole/Vektoranalyse/Uge 4/Genaflevering 4.tex",
+		"/home/steffen/.config/sublime-text-2/Packages/User/equation*.sublime-snippet",
+		"/home/steffen/Dropbox/Skole/Vektoranalyse/Uge 5/Genaflevering 5.tex",
+		"/home/steffen/Dropbox/Skole/Vektoranalyse/Uge 3/Genaflevering 3.tex",
+		"/home/steffen/.config/sublime-text-2/Packages/User/gather.sublime-snippet",
+		"/home/steffen/.config/sublime-text-2/Packages/User/dfrac.sublime-snippet",
+		"/home/steffen/Dropbox/Skole/Fysikkens Videnskabsteori/Uge 50/SteffenRandrup6.tex",
+		"/home/steffen/Dropbox/Skole/Fysikkens Videnskabsteori/Uge 50/SteffenRandrup5.tex",
+		"/home/steffen/Dropbox/Skole/Fysikkens Videnskabsteori/Uge 50/pres.tex",
+		"/home/steffen/Downloads/linux-3.7/kernel/async.c",
+		"/usr/share/applications/sublime.desktop",
+		"/usr/share/applications/defaults.list"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/steffen/Dropbox/Apps/Sublime-text-2/Packages/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"solid",
+			"dfrac",
+			"4cm",
+			"2",
+			"tinylist",
+			"list",
+			"nality",
+			"align",
+			"section name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.git":
+	{
+		"height": 90.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"SearchVisitor.java"
+			],
+			[
+				"sear",
+				"SearchVisitor.java"
+			],
+			[
+				"test",
+				"Test1.java"
+			],
+			[
+				"ja",
+				"Test1.java"
+			],
+			[
+				"jav",
+				"SearchVisitor.java"
+			],
+			[
+				"java",
+				"SearchVisitor.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/steffen/Desktop/test/test.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true
+}

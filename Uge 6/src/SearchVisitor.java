@@ -18,29 +18,11 @@ public class SearchVisitor implements FileSystemVisitor<Void> {
 
 	@Override
 	public Void visitDirectory(DirectoryNode d) {
+ 		path = path + "/" + d.getName();
 
-		if(path.equals("")){
-			path = d.getName();
-		}
-		
-		String pathHolder = path;
-		
-		for (FileSystemNode node : d) {
-
-			if (node.getClass().equals(DirectoryNode.class)) {
-				
-				path = pathHolder + "/" + ((DirectoryNode) node).getName();					
-				visitDirectory((DirectoryNode) node);
-
-			} else if (node.getClass().equals(FileNode.class)) {
-				
-				path = pathHolder;
-				visitFile((FileNode) node);
-				
-			}
-			
+		for (FileSystemNode Node : d) {
+			node.accept(this);
 		}
 		return null;
 	}
-
 }

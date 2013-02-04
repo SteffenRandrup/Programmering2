@@ -1,0 +1,43 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/steffen/Dropbox/Skole/Programmering 2/Uge 4"
+		}
+	],
+
+    "settings":
+    {
+
+        // SublimeJava
+        "sublimejava_classpath":
+        [
+            "${home}/Dropbox/Skole/Programmering 2/Uge 4/bin"
+        ],
+
+       "sublimejava_srcpath":
+        [
+            "${home}/Dropbox/Skole/Programmering 2/Uge 4/src"
+        ],
+
+        // SublimeLinter
+        "SublimeLinter":
+        {
+
+            "Java":
+            {
+
+                "working_directory": "$project_path", //??????????????+
+                "lint_args":
+                [
+                  "-sourcepath", "/home/steffen/Dropbox/Skole/Programmering 2/Uge 4/src", // "-sourcepath", "$file_path",
+                  "-classpath", "/home/steffen/Dropbox/Skole/Programmering 2/Uge 4/bin",  // "-classpath", "$project_path/bin",   
+                  "-Xlint","-Xlint:serial",
+                  "{filename}"
+                ]
+
+            }
+
+        }
+    }
+}

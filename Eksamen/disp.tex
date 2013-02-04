@@ -1,0 +1,537 @@
+\input{../../Skabeloner/preamble}
+\author{Steffen Randrup}
+\title{Dispositioner Eksamen Programmering 2 - 2012}
+\begin{document}
+\maketitle
+\newpage
+\section{Rekursive metoder og datastrukturer} % (fold)
+\label{sec:rekursive_metoder_og_datastrukturer}
+\subsection{Generelt om rekursion} % (fold)
+\label{sub:generelt_om_rekursion}
+\begin{itemize}
+    \item Kald af sig selv
+    \item Rekursionsbetingelse
+    \item Rekursion vs. iteration (gem?)
+\end{itemize}
+
+% subsection generelt_om_rekursion (end)
+\subsection{Eksempler} % (fold)
+\label{sub:eksempler}
+\begin{itemize}
+    \item Fibonachi
+    \item Fraktaler
+    \item Randomizing?
+\end{itemize}
+% subsection eksempler (end)
+
+\subsection{Gensidig rekursion} % (fold)
+\label{sub:gensidig_rekursion}
+\begin{itemize}
+    \item Flere metoder kalder hinanden
+    \item Evaluering af udtryk?
+\end{itemize}
+% subsection gensidig_rekursion (end)
+
+\subsection{Rekursive datastrukturer} % (fold)
+\label{sub:rekursive_datastrukturer}
+fx Filsystem
+% subsection rekursive_datastrukturer (end)
+\subsection{Rekursive træer} % (fold)
+\label{sub:rekursive_tr_er}
+\begin{itemize}
+    \item Kan evalueres eller er nyt udtryk
+    \item Beskrives med interface, Node og Leaf
+    \item For at undgå casts skal interface have metode (fx getValue())
+\end{itemize}
+% subsection rekursive_tr_er (end)
+\subsection{Visitor pattern} % (fold)
+\label{sub:visitor_pattern}
+\begin{itemize}
+    \item Ulempe før, fordi metoderne skræddersys til én slags gennemløb
+    \item Lad ny klasse bestemme, hvilken type gennemløb, der skal bruges. Skal implementere interface for at tillade mange forskellige gennemløb
+    \item Tree interface har accept-metode kræver visitor interface (parameter?)
+    \item Node og Leaf bruger accept() til at kalde visitNode og visitLeaf
+    \item Det er op til den evaluerende klasse at implementere disse metoder
+\end{itemize}
+% subsection visitor_pattern (end)
+
+\subsection{Visitor / lokal rekursion} % (fold)
+\label{sub:visitor_almindelig_rekursion}
+Visitor er god, når man ved nøjagtigt hvor mange klasser, der implementerer Tree-interface, fordi man kan lave forskellige typer gennemløb uden at skulle ændre oprindelig kode. Dvs man skal bare skrive, hvordan man vil have det\\
+\\
+Lokale rekursive metoder er gode, når man ikke behøver forskellige gennemløb fra én klasse, men tilgengæld har man mange klasser, der skal kunne kaldes rekursivt, og der skal være mulighed for at udvidde mængden af de klasser.\\
+\\
+Begge handler om at skulle ændre mindst mulig eksisterende kode.
+% subsection visitor_almindelig_rekursion (end)
+
+% section rekursive_metoder_og_datastrukturer (end)
+\newpage
+\section{Klassedesign og invarianter} % (fold)
+\label{sec:klassedesign_og_invarianter}
+\subsection{Encapsulation} % (fold)
+\label{sub:encapsulation}
+\begin{itemize}
+    \item Skal kunne skifte implementation
+    \item ikke noget med public instansvariable
+    \item Koden skal kunne vedligeholdes
+\end{itemize}
+% subsection encapsulation (end)
+\subsection{Accessorer og mutatorer} % (fold)
+\label{sub:accessorer_og_mutatorer}
+\begin{itemize}
+    \item mutatorer modificerer objektet
+    \item accesorer returnerer noget
+    \item Uden mutatorer er klasse immutable
+    \item Mutatorer bryder indkapsling (må ikke sætte i en ugyldig tilstand)
+    \item Giver man adgang til mutable object brydes indkapsling, selvom det er accessor metode (Emplayee harry = new Employee(); Date d = harry.getHireDate(); d.setDate(t); ændrer fordi d peger på date objektet )
+    \item undgå problemer ved clone()
+    \item final keyword sikrer man ikke kan tilskrive ny værdi til variabel
+    \item Sideeffects
+\end{itemize}
+% subsection accessorer_og_mutatorer (end)
+\subsection{Kvalitet} % (fold)
+\label{sub:kvalitet}
+\begin{itemize}
+    \item Metoder skal være relaterede til enkelt abstraktion
+    \item Completeness
+    \item Convenience
+    \item Clarity
+    \item Consistency
+\end{itemize}
+% subsection kvalitet (end)
+\subsection{Contract og klasseinvarians} % (fold)
+\label{sub:contract_og_klasseinvarians}
+\begin{itemize}
+    \item precondition
+    \item postcondition
+    \item opfyldt af alle objekter af klasstypen efter udførelsen af enhver konstruktør eller metode
+    \item Tilstand er bevaret før og efter hvert kald
+    \item Interface invarians er kun public implementation er alt
+    \item Pre og post kan godt indgå som del af invarians
+    \item Man kan være nødt til at sikre sig i sin konstruktør at invariansen er overhold fx ved sortering, så bliver implementering nemmere
+\end{itemize}
+% subsection contract_og_klasseinvarians (end)
+% section klassedesign_og_invarianter (end)
+\newpage
+\section{Polymorfi og interfaces} % (fold)
+\label{sec:polymorfi_og_interfaces}
+Specifikke problemer kan gøres mere generelle fx Coin og Grade fra slides
+\subsection{Interface} % (fold)
+\label{sub:interface}
+\begin{itemize}
+    \item Specificerer et sæt metoder men implementerer dem ikke
+    \item Metoder automatisk public
+    \item Specificerer ikke instansvariable, men der kan godt specificeres variable. Disse vil være public static final
+    \item En klasse kan godt implementere flere interfaces
+    \item Der kan ikke være objects af interface-typen (Interf if = new Interf(); går ikke, men det gør Interf if = new ting-som-implementerer-Interf();)
+\end{itemize}
+% subsection interface (end)
+\subsection{Polymorfi} % (fold)
+\label{sub:polymorfi}
+\begin{itemize}
+    \item Implementering af interface kræver implementation af de givne metoder
+    \item Man kan kalde interfacets metoder uden at bekymre sig om, hvilket object der er tale om
+    \item polymorfisk variabel og metodepolymorfi
+    \item implementering af metoder er ikke nødvendigvis ens
+    \item Kan styre flere klasser samtidigt, hvis de implementerer det samme interface
+\end{itemize}
+% subsection polymorfi (end)
+\subsection{Vigtige eksempler} % (fold)
+\label{sub:vigtige_eksempler}
+\begin{itemize}
+    \item Comparable
+    \item Comparator (nævn også anonyme klasser
+    \item (Brugerflader (ActionListener og anonyme klasser)))
+\end{itemize}
+% subsection vigtige_eksempler (end)
+\subsection{Hvorfor?} % (fold)
+\label{sub:hvorfor_}
+Design eget interface for at afkoble specifikke emplementationsdetaljer fra generelle mekanismer\\
+\\
+Bruges i rigtig mange designmønstre
+% subsection hvorfor_ (end)
+\subsection{Nedarvning} % (fold)
+\label{sub:nedarvning}
+\begin{itemize}
+    \item Selvom om extends, så finder java selv den rigtige metode
+    \item =
+    \item ?
+\end{itemize}
+% subsection nedarvning (end)
+% section polymorfi_og_interfaces (end)
+\newpage
+\section{Designmønstre} % (fold)
+\label{sec:designm_nstre}
+\subsection{Hvad er det?} % (fold)
+\label{sub:hvad_er_det_}
+\begin{itemize}
+    \item (Standardiserede) løsningsmodeller til forskellige problemer
+    \item Kontekst med tilhørende problem
+    \item Løsning er afkobling af konkret problemstilling i interface
+    \item UML-diagram
+\end{itemize}
+% subsection hvad_er_det_ (end)
+
+\subsection{Iterator} % (fold)
+\label{sub:iterator}
+\begin{itemize}
+    \item Problem: Tilgå elementer i et aggregat
+    \item Aggregatet bør ikke afsløre sin indre struktur (Det skal ikke være et konkret problem, og der skal kunne skiftes implementation af aggregatet)
+    \item Der kan være flere, der gerne vil have adgang samtidigt
+    \item
+    \item Implementer Iterator eller Iterable og implementer de påkrævede metoder (next(), hasNext() og remove())
+    \item Indsæt UML her
+\end{itemize}
+% subsection iterator (end)
+
+\subsection{MVC og Observer} % (fold)
+\label{sub:observer}
+\begin{itemize}
+    \item MVC:
+    \item Model: data (ingen visuel...)
+    \item View: Visuel og ikke så meget andet. Tillader adgang til Controller
+    \item Budbringer mellem Model og View
+    \item
+    \item Observer:
+    \item Model notifies view, når der sker noget (button notifies action listener)
+    \item View attaches to model to get notified (addActionListener)
+    \item objects attach to subject
+    \item Indsæt UML
+\end{itemize}
+% subsection observer (end)
+
+\subsection{Strategy} % (fold)
+\label{sub:strategy}
+\begin{itemize}
+    \item En klasse kan have brug for forskellige variationer af en algortime
+    \item Klienter af kontekstklaseen vil en gang imellem give deres egen version
+    \item
+    \item Løsning.
+    \item Definer interface som abstraktion for algoritmen (strategy)
+    \item Konkrete strategyklasser implementerer interfacet og giver egen algoritme
+    \item kontekst kalder tilhørende metode i interfacet
+    \item
+    \item Eksempel GUI:
+\subsection{GUI} % (fold)
+\label{sub:gui}
+\begin{itemize}
+    \item Interface items består af components
+    \item components i containers
+    \item Containers arrangerer components
+    \item Layout managers
+    \item indsæt UML
+\end{itemize}
+% subsection gui (end)
+\end{itemize}
+% subsection strategy (end)
+
+\subsection{Composite} % (fold)
+\label{sub:composite}
+\begin{itemize}
+    \item Kombiner flere objekter til et object
+    \item Indehold en container i en anden
+    \item composites ~= primitives
+    \item
+    \item Løsning:
+    \item Interface er abstraction for primitives
+    \item Composites holder primitives
+    \item både composites og leafs implementerer primitive interface
+    \item composite-klassen bruger interface-metoderne på hver enkelt komponent
+    \item Indsæt UML
+\end{itemize}
+% subsection composite (end)
+
+\subsection{Decorator} % (fold)
+\label{sub:decorator}
+\begin{itemize}
+    \item Vil udvidde opførsel af component class
+    \item decorated skal kun bruges på samme måde som undecorated
+    \item component vil ikke selv stå for decoration
+    \item Der kan være vilkårligt mange decorations
+    \item
+    \item Løsning:
+    \item Definer interface som abstraktion for component
+    \item begge implementerer
+    \item Decorator manages component
+    \item Interfacemetoder på decorator udføres først på concrete component og forlænges så af decorator
+    \item Ligner composite, men decorator vil udvidde, mens composite bare samler
+\end{itemize}
+% subsection decorator (end)
+
+\subsection{Mange flere...} % (fold)
+\label{sub:mange_flere_}
+\begin{itemize}
+    \item Visitor
+\end{itemize}
+% subsection mange_flere_ (end)
+% section designm_nstre (end)
+\newpage
+\section{Nedarvning og abstract classes} % (fold)
+\label{sec:nedarvning_og_abstract_classes}
+\subsection{Konceptet} % (fold)
+\label{sub:konceptet}
+\begin{itemize}
+    \item Klasser kan være speciel udvidelse af andre
+    \item mest generel super mindst generel sub
+    \item extends
+    \item kan override men behøver ikke
+    \item sub kan bruges i stedet for super
+\end{itemize}
+% subsection konceptet (end)
+\subsection{metoder (superklasse)} % (fold)
+\label{sub:metoder_}
+\begin{itemize}
+    \item kan ikke tilgå private i super
+    \item kan ikke kalde en overskreven metode hos super
+    \item super keyword fikser
+    \item super turns off polymorfism
+    \item super(..) i konstruktør
+    \item super konstruktør uden paramtre kaldes automatisk
+    \item svagere precond stærkere postcond
+\end{itemize}
+% subsection metoder_ (end)
+\subsection{Abstract classes} % (fold)
+\label{sub:abstract_classes}
+\begin{itemize}
+    \item Undgå at gentag sig selv
+    \item abstract keyword
+    \item ikke færdigimplementeret
+    \item Standardløsninger på nogle problemer
+    \item Kan kun extend 1
+    \item Kan have fields
+\end{itemize}
+% subsection abstract_classes (end)
+\subsection{Template method} % (fold)
+\label{sub:template_method}
+\begin{itemize}
+    \item Uses abstract classes
+    \item Skal en bestemt rækkefølge af metoder kaldes på flere klasser bruges
+    \item hav template method i abstract class til at kalde primitive methods, som den enkelte klasse kan implementere selv
+\end{itemize}
+% subsection template_method (end)
+\subsection{Protected access} % (fold)
+\label{sub:protected_access}
+\begin{itemize}
+    \item Undgå at andre kan ændre noget men tillad subclasses adgang
+    \item protected metoder ikke variable
+    \item sub kan tilgå protected i super
+\end{itemize}
+% subsection protected_access (end)
+\subsection{Hvornår skal man ikke bruge det} % (fold)
+\label{sub:hvorn_r_skal_man_ikke_bruge_det}
+\begin{itemize}
+    \item is-a vs has-a
+\end{itemize}
+% subsection hvorn_r_skal_man_ikke_bruge_det (end)
+% section nedarvning_og_abstract_classes (end)
+\newpage
+\section{Exceptions and Files} % (fold)
+\label{sec:exceptions_and_files}
+Der kan opstå fejl, compileren ikke kan finde
+\subsection{Tjek og rapporter} % (fold)
+\label{sub:defensive_programming}
+\begin{itemize}
+    \item Tjek argumenter
+    \item Returtyper
+    \item Kan man forvente, returtyper bliver tjekket?
+    \item Man vil gerne undgå fejl, men det kan være klientens skyld
+    \item Notificer ikke bruger med popup. Kan være maskine
+    \item throw exception - opfordrer client til at tage højde for det
+\end{itemize}
+% subsection defensive_programming (end)
+\subsection{Exception principper} % (fold)
+\label{sub:exception_principper}
+\begin{itemize}
+    \item Mest effektive man ikke kan lave request på
+    \item Checked og Unchecked
+    \item Checked er til når man ved, der er en reel mulighed for at det går galt
+    \item Unchecked burde ikke gå galt - programfejl
+    \item Kører ikke videre fra exception
+    \item checked throws keyword
+\end{itemize}
+% subsection exception_principper (end)
+\subsection{Error recovery and avoidance} % (fold)
+\label{sub:error_recovery_and_avoidance}
+\begin{itemize}
+    \item try / catch / finally
+    \item Bruge ikke resultat fra try udenfor
+    \item Catch Blocks - recovery
+    \item Assertions
+\end{itemize}
+% subsection error_recovery_and_avoidance (end)
+\subsection{Files} % (fold)
+\label{sub:files}
+\begin{itemize}
+    \item Eksempel på meget kan gå galt
+    \item reader / writer til plain text
+    \item stream til binary
+    \item Writer: open-write-close
+    \item Hvordan håndterer man fejl her?
+    \item Reader: open-read-close wrap i BufferedReader
+    \item Scanner læser fra terminal nextInt() fx
+\end{itemize}
+% subsection files (end)
+% section exceptions_and_files (end)
+\newpage
+\section{Java Type System and Object Model} % (fold)
+\label{sec:java_type_system_and_object_model}
+\subsection{Type} % (fold)
+\label{sub:type}
+\begin{itemize}
+    \item Type specificerer sæt af værdier samt de operationer, der kan udføres på dem
+    \item Java er strongly typed og compileren finder ud af, om de kaldte operationer kan tillades
+    \item Hvis man laver casts fanges det af Runtime
+    \item primitive
+    \item Class Type
+    \item Interface
+    \item array
+    \item null
+    \item Value: value of primitive, reference to object / array, null
+    \item Arrays husker, hvad der ligger i dem
+\end{itemize}
+% subsection type (end)
+\subsection{Wrapper, enum ,inquiry} % (fold)
+\label{sub:wrapper_enum_inquiry}
+\begin{itemize}
+    \item Wrappers for primitives
+    \item Enum = privat konstruktør og endeligt antal variable, extends automatisk Enum class
+    \item instanceOf
+    \item getClass
+    \item
+\end{itemize}
+% subsection wrapper_enum_inquiry (end)
+\subsection{Object Class} % (fold)
+\label{sub:object_class}
+\begin{itemize}
+    \item toString (bliver brugt automatisk)
+    \item equals
+    \item hashCode
+    \item clone
+    \item Equality Testing: == vs equals()
+    \item Hashing skal stemme overens med equals
+    \item Forskellige objekter kan godt have ens hashCode
+\end{itemize}
+% subsection object_class (end)
+\subsection{Generic Types} % (fold)
+\label{sub:generic_types}
+\begin{itemize}
+    \item Paramteriseret og instansieret, når de erstattes af egentlige typer fx ArrayList<E> => ArrayList<String>
+    \item Instancieres kun af klasser eller interfaces
+    \item Der gælder ikke subclass relationship mellem generics instansieret med subtypes
+    \item Compileren finder selv ud af returtypen på metoder
+    \item Bounds og wildcards (<E, F extends E> eller )
+    \item Bruges F ikke kan man i stedet bruge ?
+    \item Java VM kan ikke finde ud af bonds, så den erstatter bare med Object
+    \item Kan ikke lave array af generics, kan ikke have static generic, kan ikke throw/catch generic
+    \item Der må ikke forekommer type clashes
+\end{itemize}
+% subsection generic_types (end)
+% section java_type_system_and_object_model (end)
+\newpage
+\section{Frameworks and Collections} % (fold)
+\label{sec:frameworks_and_collections}
+\subsection{Frameworks} % (fold)
+\label{sub:frameworks}
+\begin{itemize}
+    \item Set af klasser og interfaces, der strukturerer de essentielle mekanismer for et specielt domæne
+    \item Er ikke én designregl. Bruger ofte flere
+    \item Applikationsframework giver et sæt klasser der kan udvides ved subclasses
+    \item Inversion of control: Frameworket gør størstedelen af arbejdet, og så sættes programmørens specielle implementation ind til sidst
+    \item Eksempel: Applets
+\end{itemize}
+% subsection frameworks (end)
+\subsection{Collections Framework} % (fold)
+\label{sub:collections_framework}
+\begin{itemize}
+    \item Indeholder strukturer som linkedlist og hashtable, men man kan nemt lave sin egen
+    \item Collection Interface
+    \item Set Interface
+    \item SortedSet Interface
+    \item List Interface
+    \item Konkrete klasser fx ArrayList
+    \item For selv at tilføje collection skal man stå for add og iterator
+\end{itemize}
+% subsection collections_framework (end)
+\subsection{De forskellige interfaces} % (fold)
+\label{sub:de_forskellige_interfaces}
+\begin{itemize}
+    \item Collection er enhver klasse, der kan indeholde elementer
+    \item Iterator er en måde at tilgå elementer i collection (hasNext(), next(), remove())
+    \item AbstractCollection klassen implementerer mange af metoderne i Collection mangler size og iterator
+    \item Set Interface extends Collection men tilføjer ingen metoder. Fordelen er at Set er collection uden dubletter og rækkefølgen er ligegyldig, så man kan kræve et set i stedet for en Collection
+    \item List er \"ordered Collection\", hvor hvert element kan tilgås ved heltal
+    \item Har ListIterator
+    \item Problemer med gennemløb af LinkedList og ArrayList -- binary search og RandomAccess
+\end{itemize}
+% subsection de_forskellige_interfaces (end)
+\subsection{Optional Operations} % (fold)
+\label{sub:optional_operations}
+\begin{itemize}
+    \item Behov fra "Views"
+    \item View Implementerer interface fra collections og giver begrænset adgang til datastrukturen
+    \item Man kan fx addAll fra den, men man kan ikke add/remove til den
+    \item read-only, modifyable, resizable views
+\end{itemize}
+% subsection optional_operations (end)
+% section frameworks_and_collections (end)
+\newpage
+\section{Multithreading} % (fold)
+\label{sec:multithreading}
+\begin{itemize}
+    \item Threads er enheder, der kører i parallel
+    \item Rækkefølge af udførelse kan ikke garanteres
+    \item Skal også sikre synkronisering
+    \item Problem med ændring af fælles objekt
+\end{itemize}
+
+\subsection{Hvad er det?} % (fold)
+\label{sub:hvad_er_det_}
+\begin{itemize}
+    \item Kører parallelt (eller skiftevis lidt af den ene og lidt af den anden)
+    \item Alt for besværligt at skulle opnå det samme med loops
+    \item Kører uafhængigt af resten af programmet
+    \item Kører i samme process, så de kan overskrive hukommelse fra hinanden
+    \item Husk at implementere Runnable
+    \item Bør have sleep(..)
+\end{itemize}
+% subsection hvad_er_det_ (end)
+\subsection{Terminating and Sync} % (fold)
+\label{sub:terminating_and_sync}
+\begin{itemize}
+    \item Interrupt for stop
+    \item Interrupted exception
+    \item Skaffer opmærksom - slutter ikke
+    \item
+    \item Corruption af datastruktur
+    \item race condition
+\end{itemize}
+% subsection terminating_and_sync (end)
+\subsection{Block And Lock} % (fold)
+\label{sub:block_and_lock}
+\begin{itemize}
+    \item To tråde behøver ikke køre lige hurtigt
+    \item \begin{itemize}
+        \item Scheduler: Tilstand, prioritet
+        \item New
+        \item Runnable
+        \item Blocked
+        \item Dead
+        \item Time slice
+    \end{itemize}
+    \item Waiting for ... lock
+    \item Lock: Implementer Lock interface eller er object lock
+    \item Tillader ikke en ny tråd at ændre object før den første er færdig
+    \item Deadlocks:
+    \item \begin{itemize}
+        \item Tjek om fuld inden i egne metoder ellers kan tjekke blive gennemført, og så skiftes der til ny tråd er så er der ikke plads længere
+        \item Tjekker man inden i metoder kan der være problem: fx acquire Lock tjek om fuld - fuld, så vent på ikke fuld, men locked
+        \item Condition interface
+        \item Await og signalAll
+        \item Object Locks : synchonized keyword
+    \end{itemize}
+\end{itemize}
+% subsection block_and_lock (end)
+% section multithreading (end)
+
+
+\end{document}

@@ -20,49 +20,33 @@ public class MultiSet<E> extends AbstractCollection<E> {
 	}
 
 	public Iterator<E> iterator() {
+		final Iterator<E> it = set.iterator();
 		return new Iterator<E>() {
 			
-//			E element = set.iterator().next();
-//			int unik = hm.get(element);
 			E element;
 			int unik;
 			
+			
+			
 			public boolean hasNext() {	
+				//return unik > 0 || it.hasNext();
 				
 				if(unik > 0){
 					return true;
 				}
-				return set.iterator().hasNext();
+				return it.hasNext();
 			}
 
 			public E next() {
 				if(unik > 0){
 					unik--;
-					System.out.println(unik);
 					return element;
 				}
 			
-				element = set.iterator().next();
-				unik = hm.get(element);
+				element = it.next();
+				unik = hm.get(element)-1;
 				
 				return element;
-				
-				// set.iterator().next rykker ikke til det næste element i sættet!!!!
-				// Er ideen med at bruge set ikke lige netop, at jeg kan kalde denne
-				// funktion for at få næste key i mit hashMap???
-				//
-				// Ved udskrifter er jeg kommet frem til
-				// set = ["foo","bar"]
-				// element = "foo"
-				// element = set.iterator().next();
-				// element = "foo"
-				//
-				// I det sidste skridt troede jeg, at den skulle være ændret fra "foo" til "bar",
-				// men curseren har ikke rykket sig! Hvilket, som jeg havde forstået det, er meningen
-				// med next() metoden.
-				// 
-				// Den tager helt rigtigt det første element, men så bevæger den sig ikke videre
-				
 			}
 
 			public void remove() {
@@ -108,20 +92,22 @@ public class MultiSet<E> extends AbstractCollection<E> {
 	public boolean remove(Object o) {
 		@SuppressWarnings("unchecked")
 		E e = (E) o;
-		if (hm.containsKey(e)) {
-			int value = hm.get(e);
-			
-			if(value > 1){
-				hm.put(e, value-1);
-			} else {
-				hm.remove(e);
-			}
-
-			return true;
-		} else {
-			
+		if (!hm.containsKey(e)) {
 			return false;
 		}
+
+		
+		
+		int value = hm.get(e);
+
+		if(value > 1){
+			hm.put(e, value-1);
+		} else {
+			hm.remove(e);
+		}
+
+		return true;
+
 	}
 
 	@Override

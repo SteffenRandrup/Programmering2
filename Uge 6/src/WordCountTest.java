@@ -7,12 +7,17 @@ public class WordCountTest {
 		
 		for(String s : args){
 			WordCount wc = new WordCount(s, queue);
-			wc.run();
+			Thread t = new Thread(wc);
+			t.start();
 		}
 		
-		int total = 0;	
-		for(int i : queue){
-			total += i;
+		int total = 0;
+		for(String s : args){
+			try {
+				total += queue.take();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 		
 		System.out.println("Total word count is: " + total);

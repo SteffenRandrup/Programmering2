@@ -14,5 +14,4 @@ public class SizeVisitor implements FileSystemVisitor<Integer>{
 		}
 		return totalSize;
 	}
-
 }
